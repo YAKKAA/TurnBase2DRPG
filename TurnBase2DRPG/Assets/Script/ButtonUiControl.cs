@@ -61,7 +61,7 @@ public class ButtonUiControl : MonoBehaviour
 
         foreach(Spell spell in spells)
         {
-            Button spellButton = Instantiate<Button>(button, spellPanel.transform);
+            Button spellButton = Instantiate<Button>(button[0], spellPanel.transform);
             spellButton.GetComponentInChildren<Text>().text = spell.spellName;
             spellButton.onClick.AddListener(() => SelectSpell(spell));
         }

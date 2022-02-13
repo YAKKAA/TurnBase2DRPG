@@ -19,7 +19,7 @@ public class Enemy : Character
                 {
                     target = BattleController.Instance.GetWeakeastUnit();
                 }
-                if(!CastSpell(spellToCast,target));
+                if(!CastSpell(spellToCast,target))
                 {
                     BattleController.Instance.DoAttack(this, target);
                 }
