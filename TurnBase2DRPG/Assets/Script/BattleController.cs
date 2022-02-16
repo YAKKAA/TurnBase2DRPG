@@ -12,7 +12,7 @@ public class BattleController : MonoBehaviour
     public bool playerIsAttack;
 
     [SerializeField] public BattleSpawnPoint[] spawnPoints;
-    [SerializeField] private ButtonUiControl uiController;
+    [SerializeField] public ButtonUiControl uiController;
  
     public void Start() 
     {
@@ -27,6 +27,8 @@ public class BattleController : MonoBehaviour
         
         characters.Add(0, new List<Character>());
         characters.Add(1, new List<Character>());
+
+        FindObjectOfType<BattleLauncher>().Launch();
     }
 
     public Character GetRandomPlayer()
